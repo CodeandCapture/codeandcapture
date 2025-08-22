@@ -1,88 +1,119 @@
 <!DOCTYPE html>
-<html lang= "en">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Code and Capture - Website Development & Photography Services </title>
-  <meta name= "description" content="Code and Capture offers website development and management, photography and design services to reflect quality business.">
-  <meta name="author" content="Code and Capture">
-  <link rel="canonical" href="https://www.codeandcapture.co.uk/">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Code and Capture - Website Development & Photography Services</title>
+  <meta name="description" content="Code and Capture offers website development and management, photography and design services to reflect quality business." />
+  <meta name="author" content="Code and Capture" />
+  <link rel="canonical" href="https://www.codeandcapture.co.uk/" />
 
-  <!--Open Graph-->
-  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;1,100&display=swap" rel="stylesheet">
 
-  <!--Google Fonts-->  
-  <link rel="preconnect" href="https://fonts.googleapis.com"> 
-  <link rel="preconnect" href="https://fonts.gstatic" crossorgin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodini+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
-<style>
-  body {
-    font-family:  "Bodini Moda", serif; 
-                             font-optical-sizing: auto;
-                             font-weight: <96>
-                             font-style: normal;
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    text-align: left;
-  }
-  .site-header {
-    background-image: url('https://codeandcapture.github.io/codeandcapture/images/DSC02857.jpg');
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: white;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .site-header {
+      text-align: center;
+      padding: 60px 20px 20px;
+      background-image: url('https://codeandcapture.github.io/codeandcapture/images/DSC02857.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 300px;
-    display: flex;
-    color: white;
-    text-shadow 0 2px 4px rgba (0,0,0,0.6);
-     align-items: left;
-    font-family: "Bodini Moda", serif; 
-    font-optical-sizing: auto;
-    font-weight: <96>
-    font-style: normal;
-    padding: 30px;
-  }
-  h1 {
-    margin: 0;
-    font-size: 36px;
-  }
-a {
-  font-size: 20px;
-  color: black;
-  text-decoration: none;
-}
-  a:hover {
-    background-color: black;
-    padding: 20px;
-  }
-  
-  footer {
-    text-align: left;
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
-  }
-    
-                            
-</style>
-</head>
-  <body>
+    }
 
-    <!--Header-->
-<header class="site-header">
-  <div style="max-width: 1200px; margin: 20px; display: flex; justify-content: space-between; align-items: left; flex-wrap: wrap">
-  <div style="flex: 1 1 300px; min-width: 200px">
-    <h1 style="text-align: left; font-size: 30px; text-transform: uppercase; margin-bottom: 20px;">Code and Capture</h1>
-    <p style="margin: 0px; 0; font-size: 18px; font-style: italic; color: white;">Website development and photography for quality business</p>
-  </div>
-  <div>
-    <a href= "index.html" style="margin-left: 20px; color: white;">Home</a>
-    <a href= "web.html" style="margin-left: 20px; color: white;">Web Design</a>
-    <a href= "photography.html" style="margin-left: 20px; color: white;">Photography</a>
-  </div>
-  </div>
-</header>
-    
-  </body>
+    .site-header h1 {
+      font-weight: 400;
+      font-size: 36px;
+      text-transform: uppercase;
+      margin: 0;
+      color: white;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 40px;
+   
+      padding-bottom: 20px;
+    }
+
+    .nav-links a {
+      font-weight: 400;
+      font-size: 18px;
+      color: white;
+      text-decoration: none;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: black;
+      left: 0;
+      bottom: -3px;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      transform-origin: bottom right;
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    footer {
+      text-align: left;
+      background-color: white;
+      padding: 20px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+      <div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; ">
+    <h1>CODE AND CAPTURE</h1>
   
+  <!-- Navigation -->
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="web.html">Web Design</a>
+    <a href="photography.html">Photography</a>
+  </nav>
+  </div>
+  </header>
+  
+  <section style="padding: 40px; text-align: center;">
+       <h2 style="
+    font-size: 20px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9); /* slightly less transparent */
+    color: #111; /* darker text for better contrast */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    line-height: 1.6;
+    font-weight: 400; /* slightly stronger than 300 */
+  "> From website creation and management to photography, content creation and print design support, let us help reflect the best of your business.</h2>
+  </section>
+
+
+</body>
 </html>
