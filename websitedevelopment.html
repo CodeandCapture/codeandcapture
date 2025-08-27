@@ -18,9 +18,22 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <style>
+    
+    html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+header, section, footer, div, nav {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+    
     body {
-      margin: 0;
-      padding: 0;
+    
       background-color: white;
       font-family: "Montserrat", sans-serif;
       color: #111;
@@ -28,7 +41,7 @@
 
     .site-header {
       text-align: center;
-      padding: 10px;
+  padding: 20px;
       background-image: url('https://codeandcapture.github.io/codeandcapture/images/pexels-pixabay-532173.jpg');
       background-size: cover;
       background-position: top;
@@ -51,7 +64,17 @@
       gap: 40px;
       padding-bottom: 20px;
     }
-
+    
+.section-intro {
+  font-size: 1.2rem;
+  font-weight: 400;
+ 
+  margin: 0 auto 0rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #111;
+}
+    
     .nav-links a {
       font-weight: 400;
       font-size: 18px;
@@ -203,6 +226,15 @@
       padding: 20px;
       margin-top: 20px;
     }
+    
+    html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
   </style>
 </head>
 
@@ -219,9 +251,13 @@
     </div>
   </header>
 
-  <section style="padding: 20px; text-align:center; max-width:900px; margin:auto;">
-    <h3 style="font-weight: 400;">Professional websites that grow with your business. Whether you need a simple, low-cost site or ongoing support with blogs, photography, and SEO, we’ve got a plan that fits. Scroll down to see our services.</h3>
-  </section>
+  <section class="package-section intro" style="background:#fff; color:#111;">
+  <p class="section-intro">
+    Professional websites that grow with your business. Whether you need a simple, low-cost site 
+    or ongoing support with blogs, photography, and SEO, we’ve got a plan that fits. 
+    Scroll down to see our services.
+  </p>
+</section>
 
   <!-- Starter Package -->
   <section class="package-section starter">
