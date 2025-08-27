@@ -1,1 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Website Development Services - Code and Capture</title>
+  <meta name="description" content="Website development including photography and design support. Reduce annual costs, enjoy a bespoke website and have full control with specialist support." />
+  <meta name="author" content="Code and Capture"/>
+  <link rel="canonical" href="https://www.codeandcapture.co.uk/websiteservices"/>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;1,100&display=swap" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    
+    html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+header, section, footer, div, nav {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+    
+    body {
+    
+      background-color: white;
+      font-family: "Montserrat", sans-serif;
+      color: #111;
+    }
+
+    .site-header {
+      text-align: center;
+  padding: 20px;
+      background-image: url('https://codeandcapture.github.io/codeandcapture/images/DSC08954.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .site-header h1 {
+      font-weight: 400;
+      font-size: 36px;
+      text-transform: uppercase;
+      margin: 0;
+      color: white;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 40px;
+      padding-bottom: 20px;
+    }
+    
+.section-intro {
+  font-size: 1.2rem;
+  font-weight: 400;
+ padding: 20px;
+  margin: 0 auto 0rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #111;
+}
+    
+    .nav-links a {
+      font-weight: 400;
+      font-size: 18px;
+      color: white;
+      text-decoration: none;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: white;
+      left: 0;
+      bottom: -3px;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      transform-origin: bottom right;
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    /* Package Sections */
+    .package-section {
+      width: 100%;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .package-section.starter {
+      background: #334257;
+      color: #ffffff;
+    }
+    .package-section.growth {
+      background: #E8E8E8;
+      color: #111;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    .package-title {
+      font-size: 1.8rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+    .features, .addons {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 2rem;
+    }
+    .features li, .addons li {
+      margin: 0.5rem 0;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+    .addons-title {
+      font-size: 1rem;
+      text-transform: uppercase;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    .cta, .c {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 2rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+    .cta {
+      border: 2px solid #fff;
+      color: #fff;
+    }
+    .cta:hover {
+      background: #fff;
+      color: #111;
+    }
+    .c {
+      border: 2px solid #111;
+      color: #111;
+    }
+    .c:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    /* Photography Section */
+    .photography-section {
+      background: #fff;
+      color: #111;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .photography-title {
+      font-size: 1.8rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0.5rem;
+    }
+    .photography-subtitle {
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+    .category-title {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin: 2rem 0 1rem;
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .photo-grid img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 6px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .photo-grid img:hover {
+      transform: scale(1.04);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      text-align: left;
+      background-color: white;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    
+    html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+  </style>
+</head>
+<body>  <header class="site-header">
+      <div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; ">
+    <h1>Photography</h1>
+  
+  <!-- Navigation -->
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="websitedevelopment.html">Website Services</a>
+    <a href="photography.html">Photography</a>
+  </nav>
+  </div>
+  </header>
+<section class="section-intro">
+  <p>
+    From venue and product photography tailored for websites and social content to nature and architecture photography ideal for articles and campaigns, we offer a versatile range of photography services. As part of our collective of freelance creatives, all photography is led by <strong>Harry May</strong>, our dedicated photographer.
+  </p>
+</section>
+
+
+  
+<body>
+
+</html>
