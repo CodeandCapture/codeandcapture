@@ -140,7 +140,7 @@
 </head>
 <body>
 <header class="site-header"><header class="site-header">
-      <div style="background-color: rgba(0, 0, 0, 0.8); padding: 20px; ">
+      <div style="background-color: rgba(0, 0, 0, 0.8); padding: 10px; ">
 <h4 style="color: white;">CODE AND CAPTURE</h4>    
 <h1>Website services</h1>
   
@@ -222,7 +222,7 @@
 /* Typography */
 .package-title {
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 1rem;
@@ -239,7 +239,7 @@
 }
 .features li, .addons li {
   margin: 0.5rem 0;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 1px;
 }
 .addons-title {
@@ -289,14 +289,91 @@
 </style>
 
 
+<section class="photography-section">
+  <div class="photography-content">
+    <h2 class="photography-title">WEBSITE PHOTOGRAPHY</h2>
+    <p class="photography-subtitle">Professional images to make your website stand out — from products to nature and venues.</p>
 
-  
-  <section style="background-image: url(''); background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;">
-    <h2>PHOTOGRAPHY SERVICES</h2>
-    <h3>Capture the best of your business</h3>
-  </section>
+    <!-- Product Photography -->
+    <h3 class="category-title">PRODUCT PHOTOGRAPHY</h3>
+    <div class="photo-grid">
+      <img src="https://codeandcapture.github.io/codeandcapture/images/productphotograhy.jpg" alt="Product example 1">
+      <img src="https://codeandcapture.github.io/codeandcapture/images/productphoto1.jpg" alt="Product example 2">
+      <!-- You can add more here -->
+    </div>
+
+    <!-- Nature Photography -->
+    <h3 class="category-title">NATURE PHOTOGRAPHY</h3>
+    <div class="photo-grid">
+      <img src="https://codeandcapture.github.io/codeandcapture/images/horse2(1).jpg" alt="Nature example 1">
+      <img src="https://codeandcapture.github.io/codeandcapture/images/horse.jpg" alt="Nature example 2">
+      <img src="https://codeandcapture.github.io/codeandcapture/images/DSC02857.jpg" alt="Nature example 3">
+      <!-- You can add more here -->
+    </div>
+
+    <!-- Venue Photography -->
+    <h3 class="category-title">VENUE PHOTOGRAPHY</h3>
+    <div class="photo-grid">
+      <img src="https://codeandcapture.github.io/codeandcapture/images/90c63785-f724-4a29-ac01-2e88cc4184cd.jpg" alt="Venue example 1">
+      <img src="https://codeandcapture.github.io/codeandcapture/images/OakHouse.jpg" alt="Venue example 2">
+      <!-- You can add more here -->
+    </div>
+  </div>
+</section>
+
+<style>
+.photography-section {
+  background: #fff;
+  color: #111;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.photography-title {
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.photography-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  color: #444;
+}
+
+.category-title {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 2rem 0 1rem;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+</style>
+
+ 
 
 
 </body>
