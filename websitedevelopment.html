@@ -1,38 +1,38 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-<meta charset="UTF-8"/>
-<meta name ="viewport" content ="width=device-width, initial scale-1"/>
-<title> Website Development Services - Code and Capture </title>
-<meta name="description" content="Website development including photography and design support.  Reduce annual costs, enjoy a bespoke website and have full control with specialist support." />
-<meta name="author" content="Code and Capture"/>
-<link rel="canonical" href="https://www.codeandcapture.co.uk/websiteservices"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Website Development Services - Code and Capture</title>
+  <meta name="description" content="Website development including photography and design support. Reduce annual costs, enjoy a bespoke website and have full control with specialist support." />
+  <meta name="author" content="Code and Capture"/>
+  <link rel="canonical" href="https://www.codeandcapture.co.uk/websiteservices"/>
 
-<! -- Google Fonts -->
-
- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;1,100&display=swap" rel="stylesheet">
-<!-- AOS CSS -->
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-<style>
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
     body {
       margin: 0;
       padding: 0;
       background-color: white;
       font-family: "Montserrat", sans-serif;
+      color: #111;
     }
 
     .site-header {
       text-align: center;
-      padding: 10px 10px 10px;
-      background-color: white;
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
+      padding: 10px;
+      background-image: url('https://codeandcapture.github.io/codeandcapture/images/pexels-pixabay-532173.jpg');
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
     }
 
     .site-header h1 {
@@ -49,7 +49,6 @@
       justify-content: center;
       margin-top: 20px;
       gap: 40px;
-   
       padding-bottom: 20px;
     }
 
@@ -75,59 +74,128 @@
     }
 
     .nav-links a:hover::after {
-     
       transform: scaleX(1);
       transform-origin: bottom left;
     }
-    
-.photo-gallery {
-  display: grid;
- 
-  gap: 20px;
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
-.photo-gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
+    /* Package Sections */
+    .package-section {
+      width: 100%;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .package-section.starter {
+      background: #334257;
+      color: #ffffff;
+    }
+    .package-section.growth {
+      background: #E8E8E8;
+      color: #111;
+      border-top: 1px solid #e0e0e0;
+    }
 
-.hero-section {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 20px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 300px;
-  text-align: center;
-  position: relative;
-}
+    .package-title {
+      font-size: 1.8rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+    .features, .addons {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 2rem;
+    }
+    .features li, .addons li {
+      margin: 0.5rem 0;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+    .addons-title {
+      font-size: 1rem;
+      text-transform: uppercase;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
 
-.hero-section h2 {
-  color: #111;
-  font-weight: 900;
-  text-transform: uppercase;
-  font-size: 32px;
-  letter-spacing: 1px;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1.5s ease-out forwards;
-}
+    .cta, .c {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 2rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+    .cta {
+      border: 2px solid #fff;
+      color: #fff;
+    }
+    .cta:hover {
+      background: #fff;
+      color: #111;
+    }
+    .c {
+      border: 2px solid #111;
+      color: #111;
+    }
+    .c:hover {
+      background: #111;
+      color: #fff;
+    }
 
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+    /* Photography Section */
+    .photography-section {
+      background: #fff;
+      color: #111;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .photography-title {
+      font-size: 1.8rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0.5rem;
+    }
+    .photography-subtitle {
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+    .category-title {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin: 2rem 0 1rem;
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .photo-grid img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 6px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .photo-grid img:hover {
+      transform: scale(1.04);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
 
     footer {
       text-align: left;
@@ -136,246 +204,104 @@
       margin-top: 20px;
     }
   </style>
-
 </head>
+
 <body>
-<header class="site-header"><header class="site-header">
-      <div style="background-color: rgba(0, 0, 0, 0.8); padding: 10px; ">
-<h4 style="color: white;">CODE AND CAPTURE</h4>    
-<h1>Website services</h1>
-  
-  <!-- Navigation -->
-  <nav class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="web.html">Web Design</a>
-    <a href="photography.html">Photography</a>
-  </nav>
-  </div>
+  <header class="site-header">
+    <div style="background-color: rgba(0, 0, 0, 0.3); padding: 10px;">
+      <h4 style="color: white;">CODE AND CAPTURE</h4>    
+      <h1>Website Services</h1>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="web.html">Web Design</a>
+        <a href="photography.html">Photography</a>
+      </nav>
+    </div>
   </header>
 
-  <section style="padding: 20px;">
-   <h3 style="font-weight: 400;">Professional websites that grow with your business. Whether you need a simple, low-cost site or ongoing support with blogs, photography, and SEO, we’ve got a plan that fits. Scroll down to see our services.</h3>
+  <section style="padding: 20px; text-align:center; max-width:900px; margin:auto;">
+    <h3 style="font-weight: 400;">Professional websites that grow with your business. Whether you need a simple, low-cost site or ongoing support with blogs, photography, and SEO, we’ve got a plan that fits. Scroll down to see our services.</h3>
   </section>
 
+  <!-- Starter Package -->
   <section class="package-section starter">
-  <div class="package-content">
-    <h2 class="package-title">STARTER PACKAGE</h2>
-    <p class="price">FROM £300 (ONE-OFF)</p>
-    <ul class="features">
-      <li>1–5 PAGE RESPONSIVE WEBSITE</li>
-      <li>BASIC SEO SETUP</li>
-      <li>DOMAIN & HOSTING (1 YEAR)</li>
-      <li>SSL CERTIFICATE</li>
-    </ul>
-
-    <h3 class="addons-title">OPTIONAL ADD-ONS</h3>
-    <ul class="addons">
-      <li>BASIC CODE TRAINING & AI PROMPTS — £200/DAY</li>
-      <li>ANNUAL DOMAIN HOSTING & SEO CHECKS — £50/YEAR</li>
-      <li>BLOG POSTS & CONTENT CREATION — £250/PIECE</li>
-      <li>MONTHLY PHOTOGRAPHY SESSION — £300/MONTH</li>
-    </ul>
-
-    <a href="#contact" class="cta">GET STARTED</a>
-  </div>
-</section>
-
-<section class="package-section growth">
-  <div class="package-content">
-    <h2 class="package-title">GROWTH PACKAGE</h2>
-    <p class="price">£500 SETUP + £250/MONTH</p>
-    <ul class="features">
-      <li>EVERYTHING IN STARTER PACKAGE</li>
-      <li>ADDITIONAL CUSTOM PAGES</li>
-      <li>MONTHLY BLOG POSTS</li>
-      <li>MINOR CONTENT UPDATES</li>
-      <li>ONGOING SUPPORT</li>
-      <li>DOMAIN HOSTING & MANAGEMENT</li>
-    </ul>
-
-    <h3 class="addons-title">OPTIONAL ADD-ONS</h3>
-    <ul class="addons">
-      <li>ALL STARTER ADD-ONS AVAILABLE</li>
-    </ul>
-
-    <a href="#contact" class="c">CHOOSE GROWTH</a>
-  </div>
-</section>
-
-<style>
-/* Section styles */
-.package-section {
-  width: 100%;
-  padding: 5rem 2rem;
-  text-align: center;
-}
-.package-section.starter {
-  background: #334257;
-  color: #ffffff;
-}
-.package-section.growth {
-  background: #E8E8E8;
-  color: #111;
-  border-top: 1px solid #e0e0e0;
-}
-
-/* Typography */
-.package-title {
-  font-size: 1.8rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
-}
-.price {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-}
-.features, .addons {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0 2rem;
-}
-.features li, .addons li {
-  margin: 0.5rem 0;
-  font-weight: 400;
-  letter-spacing: 1px;
-}
-.addons-title {
-  font-size: 1rem;
-  text-transform: uppercase;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-}
-
-/* Button CTA */
-.cta {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 2rem;
-  border: 2px solid #fff;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-}
-.cta:hover {
-  background: #fff;
-  color: #111;
-}
-  
-  /* Button C */
-.c {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 2rem;
-  border: 2px solid #111;
-  color: #111;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-}
-.c:hover {
-  background: #111;
-  color: #fff;
-}
-</style>
-
-
-<section class="photography-section">
-  <div class="photography-content">
-    <h2 class="photography-title">WEBSITE PHOTOGRAPHY</h2>
-    <p class="photography-subtitle">Professional images to make your website stand out — from products to nature and venues.</p>
-
-    <!-- Product Photography -->
-    <h3 class="category-title">PRODUCT PHOTOGRAPHY</h3>
-    <div class="photo-grid">
-      <img src="https://codeandcapture.github.io/codeandcapture/images/productphotograhy.jpg" alt="Product example 1">
-      <img src="https://codeandcapture.github.io/codeandcapture/images/productphoto1.jpg" alt="Product example 2">
-      <!-- You can add more here -->
+    <div class="package-content">
+      <h2 class="package-title">Starter Package</h2>
+      <p class="price">FROM £300 (ONE-OFF)</p>
+      <ul class="features">
+        <li>1–5 PAGE RESPONSIVE WEBSITE</li>
+        <li>BASIC SEO SETUP</li>
+        <li>DOMAIN & HOSTING (1 YEAR)</li>
+        <li>SSL CERTIFICATE</li>
+      </ul>
+      <h3 class="addons-title">Optional Add-ons</h3>
+      <ul class="addons">
+        <li>BASIC CODE TRAINING & AI PROMPTS — £200/DAY</li>
+        <li>ANNUAL DOMAIN HOSTING & SEO CHECKS — £50/YEAR</li>
+        <li>BLOG POSTS & CONTENT CREATION — £250/PIECE</li>
+        <li>MONTHLY PHOTOGRAPHY SESSION — £300/MONTH</li>
+      </ul>
+      <a href="#contact" class="cta">Get Started</a>
     </div>
+  </section>
 
-    <!-- Nature Photography -->
-    <h3 class="category-title">NATURE PHOTOGRAPHY</h3>
-    <div class="photo-grid">
-      <img src="https://codeandcapture.github.io/codeandcapture/images/horse2(1).jpg" alt="Nature example 1">
-      <img src="https://codeandcapture.github.io/codeandcapture/images/horse.jpg" alt="Nature example 2">
-      <img src="https://codeandcapture.github.io/codeandcapture/images/DSC02857.jpg" alt="Nature example 3">
-      <!-- You can add more here -->
+  <!-- Growth Package -->
+  <section class="package-section growth">
+    <div class="package-content">
+      <h2 class="package-title">Growth Package</h2>
+      <p class="price">£500 SETUP + £250/MONTH</p>
+      <ul class="features">
+        <li>EVERYTHING IN STARTER PACKAGE</li>
+        <li>ADDITIONAL CUSTOM PAGES</li>
+        <li>MONTHLY BLOG POSTS</li>
+        <li>MINOR CONTENT UPDATES</li>
+        <li>ONGOING SUPPORT</li>
+        <li>DOMAIN HOSTING & MANAGEMENT</li>
+      </ul>
+      <h3 class="addons-title">Optional Add-ons</h3>
+      <ul class="addons">
+        <li>ALL STARTER ADD-ONS AVAILABLE</li>
+      </ul>
+      <a href="#contact" class="c">Choose Growth</a>
     </div>
+  </section>
 
-    <!-- Venue Photography -->
-    <h3 class="category-title">VENUE PHOTOGRAPHY</h3>
-    <div class="photo-grid">
-      <img src="https://codeandcapture.github.io/codeandcapture/images/90c63785-f724-4a29-ac01-2e88cc4184cd.jpg" alt="Venue example 1">
-      <img src="https://codeandcapture.github.io/codeandcapture/images/OakHouse.jpg" alt="Venue example 2">
-      <!-- You can add more here -->
+  <!-- Photography Section -->
+  <section class="photography-section">
+    <div class="photography-content">
+      <h2 class="photography-title">Website Photography</h2>
+      <h3 style="font-style:italic;">Capture the best of your business</h3>
+      <p class="photography-subtitle">Book a professional photography session and receive a fully edited selection of images tailored for your site (£300–£500 depending on scope). Regular sessions available from £300/month.</p>
+       <a class="c">Contact us</a>
+      <p class="photography-subtitle">Our collection of professional photographs – from dramatic countryside vistas in Devon and Scotland, to candid wildlife, architectural features and fine art compositions – is available to license for editorial or commercial use.</p>
+      <a class="c">See our album</a>
+
+      <!-- Product Photography -->
+      <h3 class="category-title">Product Photography</h3>
+      <div class="photo-grid">
+        <img src="https://codeandcapture.github.io/codeandcapture/images/productphotograhy.jpg" alt="Product example 1">
+        <img src="https://codeandcapture.github.io/codeandcapture/images/productphoto1.jpg" alt="Product example 2">
+      </div>
+
+      <!-- Nature Photography -->
+      <h3 class="category-title">Nature Photography</h3>
+      <div class="photo-grid">
+        <img src="https://codeandcapture.github.io/codeandcapture/images/horse2(1).jpg" alt="Nature example 1">
+        <img src="https://codeandcapture.github.io/codeandcapture/images/horse.jpg" alt="Nature example 2">
+        <img src="https://codeandcapture.github.io/codeandcapture/images/DSC02857.jpg" alt="Nature example 3">
+      </div>
+
+      <!-- Venue Photography -->
+      <h3 class="category-title">Venue Photography</h3>
+      <div class="photo-grid">
+        <img src="https://codeandcapture.github.io/codeandcapture/images/90c63785-f724-4a29-ac01-2e88cc4184cd.jpg" alt="Venue example 1">
+        <img src="https://codeandcapture.github.io/codeandcapture/images/OakHouse.jpg" alt="Venue example 2">
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<style>
-.photography-section {
-  background: #fff;
-  color: #111;
-  padding: 5rem 2rem;
-  text-align: center;
-}
-
-.photography-title {
-  font-size: 1.8rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 0.5rem;
-}
-
-.photography-subtitle {
-  font-size: 1rem;
-  font-weight: 400;
-  margin-bottom: 3rem;
-  color: #444;
-}
-
-.category-title {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 1px;
-  margin: 2rem 0 1rem;
-}
-
-.photo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.photo-grid img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 6px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.photo-grid img:hover {
-  transform: scale(1.04);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-</style>
-
- 
-
-
+  <footer>
+    <p>&copy; 2025 Code and Capture. All rights reserved.</p>
+  </footer>
 </body>
-
 </html>
