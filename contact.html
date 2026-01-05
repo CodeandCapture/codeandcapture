@@ -1,1 +1,201 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Code and Capture - Contact</title>
+  <meta name="description" content="Code and Capture offers website development and management, photography and design services to reflect quality business." />
+  <meta name="author" content="Code and Capture" />
+  <link rel="canonical" href="https://www.codeandcapture.co.uk/contact" />
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;1,100&display=swap" rel="stylesheet">
+<!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+
+    header, section, footer, div, nav {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+    
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: white;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .site-header {
+      text-align: center;
+      padding: 20px;
+      background-color: black;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    }
+
+    .site-header h1 {
+      font-weight: 300;
+      font-size: 36px;
+      text-transform: uppercase;
+      margin: 0;
+      color: white;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 40px;
+   
+      padding-bottom: 20px;
+    }
+
+    .nav-links a {
+      font-weight: 400;
+      font-size: 16px;
+      color: white;
+      text-decoration: none;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: black;
+      left: 0;
+      bottom: -3px;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      transform-origin: bottom right;
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    
+.photo-gallery {
+  display: grid;
+ 
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.photo-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.hero-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 300px;
+  text-align: center;
+  position: relative;
+}
+
+.hero-section h2 {
+  color: white;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 32px;
+  letter-spacing: 1px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+    footer {
+      text-align: left;
+      background-color: white;
+      padding: 20px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+      <div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; ">
+    <h1>CONTACT US</h1>
+  
+  <!-- Navigation -->
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="websitedevelopment.html">Website Services</a>
+    <a href="photography.html">Photography</a>
+     <a href="contact.html">Contact</a>
+  </nav>
+  </div>
+  </header>
+  
+ 
+
+<section style="padding: 20px 20px; max-width: 800px; margin: 0 auto;">
+  <h3 style="
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    color: #111;
+  ">
+    design@codeandcapture.co.uk
+  </h3>
+   <h3 style="
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    color: #111;
+              "> 07346 122405</h3>
+  <p style="
+    font-size: 16px;
+    line-height: 1.4;
+    color: black;
+    font-weight: 400;
+  ">
+    Email or call us with what you're looking for. From low-cost quick websites and half-day shoots to in-depth visits for research and ideation and on-going website and domain management, we tailor our services to fit you.
+  </p>
+</section>
+
+ 
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
