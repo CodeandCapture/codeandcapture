@@ -1,26 +1,66 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Code and Capture - Website Development & Photography Services</title>
   <meta name="description" content="Code and Capture offers website development and management, photography and design services to reflect quality business." />
-  <meta name="author" content="Code and Capture" />
-  <link rel="canonical" href="https://www.codeandcapture.co.uk/" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Website Development & Photography Services | Code and Capture" />
+  <meta property="og:description" content="Bespoke websites, ecommerce integration, creative photography and basic website management." />
+  <meta property="og:url" content="https://www.codeandcapture.co.uk" />
+  <meta property="og:image" content="https://www.codeandcapture.co.uk/images/DSC02857.jpg" />
+  
+  <!-- SEO -->
+  <meta name="keywords" content="website development, ecommerce websites, product photography, venue photography, Devon photographer" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.codeandcapture.co.uk" />
+
+  <!-- Schemas -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Code and Capture",
+    "url": "https://www.codeandcapture.co.uk",
+    "description": "Bespoke websites, ecommerce integration, creative photography and basic website management.",
+    "foundingDate": "2025",
+    "founders": [{
+      "@type": "Person",
+      "name": "Ellie Gibson"
+    }],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "GB",
+      "addressRegion": "England"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "email": "design@codeandcapture.co.uk",
+      "availableLanguage": "English"
+    },
+    "sameAs": [
+      "https://www.instagram.com/codeandcapture",
+      "https://www.facebook.com/codeandcapture"
+    ]
+  }
+  </script>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;1,100&display=swap" rel="stylesheet">
-<!-- AOS CSS -->
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+  
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <style>
-
-    header, section, footer, div, nav {
-  box-sizing: border-box;
-  max-width: 100%;
-}
+    * {
+      box-sizing: border-box;
+    }
     
     body {
       margin: 0;
@@ -29,342 +69,339 @@
       font-family: "Montserrat", sans-serif;
     }
 
+    /* HEADER */
     .site-header {
-      text-align: center;
-      padding: 20px;
-      background-image: url('https://www.codeandcapture.co.uk/images/Skye Mountain.jpg');
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
+      background-image: url('https://www.codeandcapture.co.uk/images/sand-textures.jpg');
+      background-size: cover;
+      background-position: top;
+      padding: 30px 20px;
     }
-
+    
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
     .site-header h1 {
-      font-weight: 300;
-      font-size: 36px;
+      font-weight: 400;
+      font-size: 28px;
       text-transform: uppercase;
       margin: 0;
       color: white;
       letter-spacing: 2px;
     }
 
-    .nav-links {
+    /* NAVIGATION */
+    .site-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .site-nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 400;
+      transition: opacity 0.3s;
+    }
+
+    .site-nav a:hover {
+      opacity: 0.7;
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    /* HERO SECTIONS */
+    .hero-image {
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      width: 100%;
+    }
+
+    .hero-section {
+      background-size: cover;
+      background-position: center;
+      padding: 20px;
       display: flex;
       justify-content: center;
-      margin-top: 20px;
-      gap: 40px;
-   
-      padding-bottom: 20px;
+      align-items: flex-end;
+      height: 300px;
+      text-align: center;
     }
 
-    .nav-links a {
+    .hero-section h2 {
+      color: white;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 32px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      margin: 0;
+    }
+
+    /* CONTENT SECTIONS */
+    .content-section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content-section h2 {
+      font-size: 28px;
       font-weight: 400;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+      color: #111;
+    }
+
+    .content-section p {
       font-size: 16px;
+      line-height: 1.6;
+      color: #111;
+      font-weight: 400;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 20px;
+      margin-right: 15px;
+      background-color: black;
+      padding: 15px 25px;
       color: white;
       text-decoration: none;
-      position: relative;
+      font-size: 16px;
+      font-weight: 400;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
     }
 
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      background: black;
-      left: 0;
-      bottom: -3px;
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-      transform-origin: bottom right;
+    .cta-button:hover {
+      background-color: #333;
     }
 
-    .nav-links a:hover::after {
-      transform: scaleX(1);
-      transform-origin: bottom left;
+    /* INTRO BOX */
+    .intro-box {
+      font-size: 18px;
+      padding: 30px;
+      border: 1px solid #ccc;
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: rgba(255, 255, 255, 0.95);
+      color: #111;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+      line-height: 1.6;
+      font-weight: 400;
+      text-align: center;
     }
-    
-.photo-gallery {
-  display: grid;
- 
-  gap: 20px;
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
-.photo-gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.hero-section {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 20px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 300px;
-  text-align: center;
-  position: relative;
-}
-
-.hero-section h2 {
-  color: white;
-  font-weight: 900;
-  text-transform: uppercase;
-  font-size: 32px;
-  letter-spacing: 1px;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1.5s ease-out forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-    footer {
-      text-align: left;
-      background-color: white;
+    /* PHOTO GALLERY */
+    .photo-gallery {
+      display: grid;
+      gap: 20px;
       padding: 20px;
-      margin-top: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .photo-gallery.two-col {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .photo-gallery.three-col {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .photo-gallery img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* MOBILE STYLES */
+    @media (max-width: 768px) {
+      .site-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 1rem;
+        z-index: 100;
+      }
+      
+      .site-nav.open {
+        display: block;
+      }
+      
+      .site-nav ul {
+        flex-direction: column;
+        gap: 0;
+      }
+      
+      .site-nav li {
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+
+      .site-nav a {
+        display: block;
+        padding: 1rem;
+      }
+      
+      .nav-toggle {
+        display: block;
+      }
+      
+      .header-inner {
+        position: relative;
+      }
+
+      .site-header h1 {
+        font-size: 20px;
+      }
+
+      .photo-gallery.two-col,
+      .photo-gallery.three-col {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-gallery img {
+        height: 200px;
+      }
+
+      .hero-section h2 {
+        font-size: 24px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- HEADER -->
   <header class="site-header">
-      <div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; ">
-    <h1>CODE AND CAPTURE</h1>
-  
-  <!-- Navigation -->
-  <nav class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="websitedevelopment.html">Website Services</a>
-    <a href="photography.html">Photography</a>
-   <a href="contact.html">Contact</a>
-  </nav>
-  </div>
+    <div class="header-inner">
+      <h1>CODE AND CAPTURE</h1>
+      
+      <nav class="site-nav" id="siteNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="websitedevelopment.html">Website Services</a></li>
+          <li><a href="photography.html">Photography</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle navigation">☰</button>
+    </div>
   </header>
-  
-  <section style="padding: 40px; text-align: center;">
-       <h2 style="
-    font-size: 18px;
-    padding: 30px;
-    border: 1px solid #ccc;
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.9); /* slightly less transparent */
-    color: #111; /* darker text for better contrast */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    line-height: 1.6;
-    font-weight: 400; /* slightly stronger than 300 */
-  "> From website creation and management to bespoke photography and content creation, let us help reflect the best of your business.</h2>
+
+  <!-- INTRO -->
+  <section>
+    <div class="intro-box">
+      From website creation and management to bespoke photography and content creation, let us help reflect the best of your business.
+    </div>
   </section>
   
-  <section style="background-image: url('https://www.codeandcapture.co.uk/images/DSC02857.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; padding: 50px;">
-      
-      
+  <!-- HERO IMAGE 1 -->
+  <div class="hero-image" style="background-image: url('https://www.codeandcapture.co.uk/images/DSC02857.jpg');" role="img" aria-label="Photography sample"></div>
+
+  <!-- WEBSITE SERVICES -->
+  <section class="content-section">
+    <h2>Website Services</h2>
+    <p>
+      We work alongside you to design and create a website perfectly suited to your business. From one-off website creation to basic website management for a small monthly fee, we offer cost-effective, premium website support.
+    </p>
+    <a href="websitedevelopment.html" class="cta-button">Find out more</a>
   </section>
 
-<section style="padding: 20px 20px; max-width: 800px; margin: 0 auto;">
-  <h2 style="
-    font-size: 28px;
-    font-weight: 400;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-    color: #111;
-  ">
-    Website Services
-  </h2>
-  <p style="
-    font-size: 16px;
-    line-height: 1.4;
-    color: black;
-    font-weight: 400;
-  ">
-    We work alongside you to design and create a website perfectly suited to your business. From one-off website creation to basic website management for a small monthly fee, we offer cost-effective, premium website support.
-  </p>
+  <!-- HERO IMAGE 2 -->
+  <div class="hero-image" style="background-image: url('https://www.codeandcapture.co.uk/images/Boat.jpg');" role="img" aria-label="Boat photography"></div>
 
-  <a href="/websitedevelopment" style="
-    display: inline-block;
-    margin-top: 30px;
-    background-color: black;
-    padding: 15px 25px;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 400;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-  ">
-    Find out more
-  </a>
-</section>
-
-  <section style="background-image: url('https://www.codeandcapture.co.uk/images/Boat.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; height: 300px;">
-      
-      
-  </section>
-
-<section style="padding: 20px 20px; max-width: 800px; margin: 0 auto;">
-  <h2 style="
-    font-size: 28px;
-    font-weight: 400;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-    color: #111;
-  ">
-    Photography
-  </h2>
-   <p style="
-    font-size: 16px;
-    line-height: 1.4;
-    color: black;
-    font-weight: 400;
-  ">
+  <!-- PHOTOGRAPHY SERVICES -->
+  <section class="content-section">
+    <h2>Photography</h2>
+    <p>
       Let us provide top-quality digital images to showcase your venue or business. We offer affordable digital and film photography and can edit and implement on your website. For high quality prints we can direct you or work alongside our local printing partners.
-   </p>
-  
-  
-  <a href="/photography" style="
-    display: inline-block;
-    margin-top: 30px;
-    background-color: black;
-    padding: 15px 25px;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 400;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-  ">
-    Photography services
-  </a>
-     
-  <a href="#" style="
-    display: inline-block;
-    margin-top: 30px;
-    background-color: black;
-    padding: 15px 25px;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 400;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-  ">
-    Publish our work
-  </a>
-   
-   
-   <div class="photo-gallery" style= "grid-template-columns: repeat(2, 1fr);">
-  
-  <img src="https://www.codeandcapture.co.uk/images/horse2(1).jpg" style="height: 300px;
-  object-fit: cover;"  >
-  <img src="https://www.codeandcapture.co.uk/images/horse.jpg" style="height: 300px;
-  object-fit: cover;" >
-  </div>
-</section>
-
-<section>
+    </p>
     
-   <div class="photo-gallery" style= "grid-template-columns: repeat(3, 1fr);">
-  
-  <img src="https://www.codeandcapture.co.uk/images/ca0b9ce5-57f7-47ef-aea3-2ace26996d5c.jpg" style="height: 200px;
-  object-fit: cover;"  >
-    <img src="https://www.codeandcapture.co.uk/images/90c63785-f724-4a29-ac01-2e88cc4184cd.jpg" style="height: 200px;
-  object-fit: cover;"  >
-  <img src="https://www.codeandcapture.co.uk/images/OakHouse.jpg" style="height: 200px;
-  object-fit: cover;" >
-  </div>
-</section>
-
-
-<section   class="hero-section" 
-  style="background-image: url('https://www.codeandcapture.co.uk/images/DSC02857.jpg'); height: 300px;"
-  data-aos="fade-up" 
-  data-aos-duration="1000">
-  <h2>From the finest details</h2>
-</section>
-
-<section   class="hero-section" 
-  style="background-image: url('https://www.codeandcapture.co.uk/images/007.jpeg'); height: 300px;"
-  data-aos="fade-up" 
-  data-aos-duration="1000">
-  <h2 style="animation-delay: 3s;">To capturing intimate moments</h2>
-</section>
-<section style="padding: 40px 20px; max-width: 800px; margin: 0 auto;">
-  <h2 style="
-    font-size: 28px;
-    font-weight: 400;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-    color: #111;
-  ">
-    License or Publish Our Photography
-  </h2>
-  <p style="
-    font-size: 16px;
-    line-height: 1.6;
-    color: #111;
-    font-weight: 400;
-  ">
-    Our collection of professional photographs – from dramatic countryside vistas in Devon and Scotland, to candid wildlife, architectural features and fine art compositions – is available to license for editorial or commercial use.
+    <a href="photography.html" class="cta-button">Photography services</a>
+    <a href="photography-catalogue.html" class="cta-button">Browse our catalogue</a>
     
-  </p>
-  <ul style="padding-left: 20px; font-size: 16px; line-height: 1.6; color: #111;">
-    <li>Available for use in magazines, books, blogs, and online features</li>
-    <li>Subjects: Product photography, British wildlife, rural landscapes, architecture, artistic shots</li>
-    <li>High-resolution images delivered digitally</li>
-  </ul>
-  <p style="font-size: 16px; line-height: 1.6; color: #111;">
-    Interested in publishing our work or requesting a custom selection?  Email us at <a href="mailto:your@email.com" style="color: black; text-decoration: underline;">design@codeandcapture.co.uk</a> or call 07346 122405.
-  </p>
-  
-  <a href="#" style="
-    display: inline-block;
-    margin-top: 30px;
-    background-color: black;
-    padding: 15px 25px;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 400;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-  ">
-   Photography Catalouge
-  </a>
-</section>
+    <!-- Sample Photos -->
+    <div class="photo-gallery two-col">
+      <img src="https://www.codeandcapture.co.uk/images/horse2(1).jpg" alt="Horse photography sample 1">
+      <img src="https://www.codeandcapture.co.uk/images/horse.jpg" alt="Horse photography sample 2">
+    </div>
+  </section>
 
-<!-- AOS JS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+  <!-- MORE SAMPLES -->
+  <section>
+    <div class="photo-gallery three-col">
+      <img src="https://www.codeandcapture.co.uk/images/ca0b9ce5-57f7-47ef-aea3-2ace26996d5c.jpg" alt="Photography sample 3">
+      <img src="https://www.codeandcapture.co.uk/images/90c63785-f724-4a29-ac01-2e88cc4184cd.jpg" alt="Photography sample 4">
+      <img src="https://www.codeandcapture.co.uk/images/OakHouse.jpg" alt="Oak House photography">
+    </div>
+  </section>
+
+  <!-- ANIMATED HERO SECTIONS -->
+  <section class="hero-section" 
+    style="background-image: url('https://www.codeandcapture.co.uk/images/DSC02857.jpg');"
+    data-aos="fade-up" 
+    data-aos-duration="1000">
+    <h2>From the finest details</h2>
+  </section>
+
+  <section class="hero-section" 
+    style="background-image: url('https://www.codeandcapture.co.uk/images/007.jpeg');"
+    data-aos="fade-up" 
+    data-aos-duration="1000">
+    <h2>To capturing intimate moments</h2>
+  </section>
+
+  <!-- LICENSE PHOTOGRAPHY -->
+  <section class="content-section">
+    <h2>License or Publish Our Photography</h2>
+    <p>
+      Our collection of professional photographs – from dramatic countryside vistas in Devon and Scotland, to candid wildlife, architectural features and fine art compositions – is available to license for editorial or commercial use.
+    </p>
+    <ul style="padding-left: 20px; font-size: 16px; line-height: 1.6;">
+      <li>Available for use in magazines, books, blogs, and online features</li>
+      <li>Subjects: Product photography, British wildlife, rural landscapes, architecture, artistic shots</li>
+      <li>High-resolution images delivered digitally</li>
+    </ul>
+    <p>
+      Interested in publishing our work or requesting a custom selection? Email us at <a href="mailto:design@codeandcapture.co.uk" style="color: black; text-decoration: underline;">design@codeandcapture.co.uk</a> or call 07538846929.
+    </p>
+    
+    <a href="photography-catalogue.html" class="cta-button">Photography Catalogue</a>
+  </section>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    
+    function toggleNav() {
+      document.getElementById('siteNav').classList.toggle('open');
+    }
+  </script>
 
 </body>
 </html>
