@@ -1,120 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Photography Services - Code and Capture</title>
   <meta name="description" content="Photography to capture the best of your business. Book a photographer for venue photography, product photography or nature and wildlife shots, or look at our collection for publishing works." />
-  <meta name="author" content="Code and Capture"/>
-  <link rel="canonical" href="https://www.codeandcapture.co.uk/photography"/>
+  <link rel="canonical" href="https://www.codeandcapture.co.uk/photography.html"/>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;1,100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <!-- AOS CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <style>
-    
-    html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-header, section, footer, div, nav {
-  box-sizing: border-box;
-  max-width: 100%;
-}
+    * {
+      box-sizing: border-box;
+    }
     
     body {
-    
+      margin: 0;
+      padding: 0;
       background-color: white;
       font-family: "Montserrat", sans-serif;
       color: #111;
     }
 
+    /* HEADER - Matching homepage */
     .site-header {
-      text-align: center;
-  padding: 20px;
-      background-image: url('https://www.codeandcapture.co.uk/images/DSC08954.jpg');
+      background-image: url('https://www.codeandcapture.co.uk/images/sand-textures.jpg');
       background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      background-position: top;
+      padding: 30px 20px;
     }
-
+    
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
     .site-header h1 {
       font-weight: 300;
-      font-size: 36px;
+      font-size: 28px;
       text-transform: uppercase;
       margin: 0;
       color: white;
       letter-spacing: 2px;
     }
 
-    .nav-links {
+    /* NAVIGATION - Matching homepage */
+    .site-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
       display: flex;
-      justify-content: center;
-      margin-top: 20px;
-      gap: 40px;
-      padding-bottom: 20px;
+      gap: 1.5rem;
     }
-    
-.section-intro {
-  font-size: 1.2rem;
-  font-weight: 400;
- padding: 20px;
-  margin: 0 auto 0rem;
-  line-height: 1.6;
-  text-align: center;
-  color: #111;
+
+    .site-nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 400;
+      transition: opacity 0.3s;
+    }
+
+    .site-nav a:hover {
+      opacity: 0.7;
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    /* PAGE TITLE SECTION */
+    .page-title-section {
+      background-color: white;
+      padding: 40px 20px;
+      text-align: center;
+      
+    }
+
+    .page-title-section h2 {
+      color: black;
+      font-weight: 300;
+      font-size: 42px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 0;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    /* INTRO SECTION */
+    .section-intro {
+      font-size: 1.2rem;
+      font-weight: 400;
+      padding: 20px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+      text-align: center;
+      color: #111;
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 30px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      border: 2px solid #111;
+      color: #111;
+      background: transparent;
+    }
+
+    .cta-button:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    .cta-section p {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #444;
+    }
+
+    .cta-section a[href^="mailto"] {
+      color: #111;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+
+    /* Image Grids */
+ 
+    .featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.featured-grid img {
+  width: 100%;
+  height: 400px; /* Fixed height ensures uniform size */
+  object-fit: cover; /* Crops image to fill space while maintaining aspect ratio */
+  border-radius: 0px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
     
-    .nav-links a {
-      font-weight: 400;
-      font-size: 16px;
-      color: white;
-      text-decoration: none;
-      position: relative;
-    }
-
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      background: white;
-      left: 0;
-      bottom: -3px;
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-      transform-origin: bottom right;
-    }
-
-    .nav-links a:hover::after {
-      transform: scaleX(1);
-      transform-origin: bottom left;
-    }
-
-    /* Package Sections */
+    /* PACKAGE SECTIONS */
     .package-section {
-      width: 100%;
-      padding: 5rem 2rem;
+      padding: 60px 20px;
       text-align: center;
     }
-    .package-section.starter {
-      background-color: #11111
+
+    .package-section.dark {
+      background-color: #1a1a1a;
       color: #ffffff;
     }
-    .package-section.content {
+
+    .package-section.light {
       background: #E8E8E8;
       color: #111;
-      border-top: 1px solid #e0e0e0;
     }
 
     .package-title {
@@ -124,64 +198,68 @@ header, section, footer, div, nav {
       letter-spacing: 2px;
       margin-bottom: 1rem;
     }
+
     .price {
-      font-size: 1.2rem;
-      font-weight: bold;
+      font-size: 1.3rem;
+      font-weight: 500;
       margin-bottom: 2rem;
     }
-    .features, .addons {
+
+    .features {
       list-style: none;
       padding: 0;
       margin: 1rem 0 2rem;
-    }
-    .features li, .addons li {
-      margin: 0.5rem 0;
-      font-weight: 400;
-      letter-spacing: 1px;
-    }
-    .addons-title {
-      font-size: 1rem;
-      text-transform: uppercase;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      font-weight: 500;
-      letter-spacing: 1px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .cta, .c {
+    .features li {
+      margin: 0.75rem 0;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      line-height: 1.5;
+    }
+
+    .package-cta {
       display: inline-block;
       margin-top: 1rem;
-      padding: 0.75rem 2rem;
+      padding: 12px 30px;
       text-decoration: none;
       text-transform: uppercase;
       font-weight: 500;
       letter-spacing: 1px;
       transition: all 0.3s ease;
     }
-    .cta {
+
+    .package-cta.light-btn {
       border: 2px solid #fff;
       color: #fff;
     }
-    .cta:hover {
+
+    .package-cta.light-btn:hover {
       background: #fff;
       color: #111;
     }
-    .c {
+
+    .package-cta.dark-btn {
       border: 2px solid #111;
       color: #111;
     }
-    .c:hover {
+
+    .package-cta.dark-btn:hover {
       background: #111;
       color: #fff;
     }
 
-    /* Photography Section */
+    /* PHOTOGRAPHY GALLERY */
     .photography-section {
       background: #fff;
       color: #111;
-      padding: 5rem 2rem;
+      padding: 60px 20px;
       text-align: center;
     }
+
     .photography-title {
       font-size: 1.8rem;
       font-weight: 300;
@@ -189,92 +267,192 @@ header, section, footer, div, nav {
       letter-spacing: 2px;
       margin-bottom: 0.5rem;
     }
+
     .photography-subtitle {
       font-size: 1rem;
       font-weight: 400;
-      margin-bottom: 0.5rem;
+      margin-bottom: 2rem;
       color: #444;
     }
-    .category-title {
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      font-weight: 400;
-      letter-spacing: 1px;
-      margin: 2rem 0 1rem;
-    }
+
     .photo-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      margin-bottom: 2rem;
-      margin-top: 2em;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
+
     .photo-grid img {
       width: 100%;
-      height: 250px;
+      height: 300px;
       object-fit: cover;
-      border-radius: 6px;
+      border-radius: 8px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .photo-grid img:hover {
-      transform: scale(1.04);
+      transform: scale(1.03);
       box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
 
-    footer {
-      text-align: left;
-      background-color: white;
-      padding: 20px;
-      margin-top: 20px;
+    /* MOBILE STYLES */
+    @media (max-width: 768px) {
+      .site-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 1rem;
+        z-index: 100;
+      }
+      
+      .site-nav.open {
+        display: block;
+      }
+      
+      .site-nav ul {
+        flex-direction: column;
+        gap: 0;
+      }
+      
+      .site-nav li {
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+
+      .site-nav a {
+        display: block;
+        padding: 1rem;
+      }
+      
+      .nav-toggle {
+        display: block;
+      }
+      
+      .header-inner {
+        position: relative;
+      }
+
+      .site-header h1 {
+        font-size: 20px;
+      }
+
+      .page-title-section h2 {
+        font-size: 28px;
+      }
+
+      .photo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-grid img {
+        height: 250px;
+      }
     }
-    
-    html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-img {
-  max-width: 100%;
-  height: auto;
-}
   </style>
-   <header class="site-header">
-    <div style="background-color: rgba(0, 0, 0, 0.3); padding: 10px;">
-      <h4 style="color: white;">CODE AND CAPTURE</h4>    
-      <h1>Photography services</h1>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="websitedevelopment.html">Web Design</a>
-        <a href="photography.html">Photography</a>
-         <a href="contact.html">Contact</a>
-    
-      </nav>
-    </div>
-  </header>
-  
-<section class="section-intro">
-  <p>
-    From venue and product photography tailored for websites and social content to nature and architecture photography ideal for articles and campaigns, we offer a versatile range of photography services. 
-  </p>
-</section>
-<section style="align-items: center; text-align: center; padding: 10px;">
-<a class="c">The Full Album</a>
-  <p>Email <a href="mailto:design@codeandcapture.co.uk">design@codeandcapture.co.uk</a> to book photography sessions or publish works.</p>
-</section>
-
-
-
-<section class="photography-section">
-  <h2 class="photography-title">Our Work</h2>
-  <p class="photography-subtitle">A glimpse into some of our recent shoots</p>
-  
-  <div class="photo-grid">
-    <img src="https://www.codeandcapture.co.uk/images/Aberfeldy3.jpg" alt="Production Photography">
-    <img src="https://www.codeandcapture.co.uk/images/whisky.jpg" alt="Nature Photography">
-    <img src="https://www.codeandcapture.co.uk/images/architecture.jpg" alt="Venue Photography">
-    <img src="https://www.codeandcapture.co.uk/images/DSC02678.jpg" alt="Nature Photography">
-  </div>
-</section>
-
+</head>
 <body>
 
+  <!-- HEADER - Matching homepage -->
+  <header class="site-header">
+    <div class="header-inner">
+      <h1>CODE AND CAPTURE</h1>
+      
+      <nav class="site-nav" id="siteNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="websitedevelopment.html">Website Services</a></li>
+          <li><a href="photography.html">Photography</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <!-- PAGE TITLE -->
+  
+  <section class="page-title-section">
+    <h2>Photography Services</h2>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section-intro">
+    <p>
+      From venue and product photography tailored for websites and social content to nature and architecture photography ideal for articles and campaigns, we offer a versatile range of photography services.
+    </p>
+  </section>
+   <section style="background-image: url('https://www.codeandcapture.co.uk/images/DSC08954.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 100px 20px;
+      text-align: center;"></section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <a href="photography-catalogue.html" class="cta-button">View Full Catalogue</a>
+    <p>Email <a href="mailto:design@codeandcapture.co.uk">design@codeandcapture.co.uk</a> to book photography sessions or license our work.</p>
+  </section>
+
+  <!-- PACKAGE: VENUE/PRODUCT PHOTOGRAPHY -->
+  <section class="package-section dark">
+    <h2 class="package-title">Venue Photography</h2>
+    <p class="price">From £200</p>
+    <ul class="features">
+      <li>Up to 2 hours on-site shooting</li>
+      <li>20-30 edited high-resolution images</li>
+      <li>Perfect for websites, social media, and marketing materials</li>
+      <li>Includes basic retouching and color correction</li>
+    </ul>
+    <a href="contact.html" class="package-cta light-btn">Book a Session</a>
+  </section>
+  
+  <section> <div class="featured-grid">
+    <img src="https://www.codeandcapture.co.uk/images/OakHouse.jpg">
+    <img src="https://www.codeandcapture.co.uk/images/oak-house-care.jpg">
+  
+  </section>
+
+  
+  <!-- PACKAGE: COMMERCIAL LICENSING -->
+  <section class="package-section light">
+    <h2 class="package-title">License Our Photography</h2>
+    <p class="price">From £160 per image</p>
+    <ul class="features">
+      <li>Access our catalogue of premium photography</li>
+      <li>Scottish landscapes, Devon coastlines, London landmarks</li>
+      <li>Wildlife, architecture, and nature photography</li>
+      <li>High-resolution files for commercial use</li>
+      <li>Suitable for magazines, books, websites, and campaigns</li>
+    </ul>
+    <a href="photography-catalogue.html" class="package-cta dark-btn">Browse Catalogue</a>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section class="photography-section">
+    <h2 class="photography-title">Our Work</h2>
+    <p class="photography-subtitle">A glimpse into some of our recent shoots</p>
+    
+    <div class="photo-grid" data-aos="fade-up">
+      <img src="https://www.codeandcapture.co.uk/images/Aberfeldy3.jpg" alt="Product Photography - Whisky distillery">
+      <img src="https://www.codeandcapture.co.uk/images/whisky.jpg" alt="Product Photography - Whisky bottles">
+      <img src="https://www.codeandcapture.co.uk/images/architecture.jpg" alt="Architecture Photography">
+      <img src="https://www.codeandcapture.co.uk/images/DSC02678.jpg" alt="Nature Photography">
+    </div>
+  </section>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    
+    function toggleNav() {
+      document.getElementById('siteNav').classList.toggle('open');
+    }
+  </script>
+
+</body>
 </html>
